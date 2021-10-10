@@ -1,0 +1,71 @@
+.settings-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.open-settings-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    width: 80%;
+}
+
+.settings-svg {
+    width: 50%;
+    height: 50%;
+}
+
+.settings-hover-text {
+    display: none;
+    position: fixed;
+    font-family: TimeFont;
+    font-size: 40px;
+    bottom: 10px;
+}
+
+.settings-button:hover .settings-hover-text {display: inherit;}
+
+.settings-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.settings-sidebar div a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #cecece;
+    display: block;
+    transition: 0.3s;
+}
+
+.settings-sidebar-close {
+    position: absolute;
+    border: none;
+    outline: none;
+    color: white;
+    backdrop-filter: blur(5px);
+    top: 0;
+    right: 0;
+    padding-top: 0px;
+    height: revert;
+    height: 10%;
+    width: 10%;
+    margin-left: 50px;
+}
+
+.settings-option-bg-online-choose {
+    display: none;
+    padding-left: 10px;
+}

@@ -6,12 +6,15 @@
 		<title>New Tab</title>
 		<script src='js/time.js'></script>
 		<script src='js/query.js'></script>
+		<script src='js/settings.js'></script>
 		<link rel='stylesheet' href='css/style.css'>
 		<link rel='stylesheet' href='css/engine.css'>
+		<link rel='stylesheet' href='css/settings.css'>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
 	</head>
 
 	<body style='border:none;'>
+		<script>updateBg();</script>
 		<div id='clock' class='clock'></div>
 		<div class='query-field' id='query-field'>
 			<div class='query-field-text'>
@@ -38,6 +41,67 @@
 				</span>
 			</div>
 		</div>
+		<div id='settings-button' class='settings-button'>
+			<span id='settings-button-and-text' class='settings-button-and-text'>
+				<tag id='open-settings-button'
+				   class='open-settings-button'>
+					<img src='assets/settings.svg'
+						 class='settings-svg'
+						 onclick="openCfg(true)">
+				</tag>
+				<tag id='settings-hover-text'
+					 class='settings-hover-text'>
+					SETTINGS
+				</tag>
+			</span>
+		</div>
+		<div id='settings-sidebar' class='settings-sidebar'>
+			<img id='settings-sidebar-close'
+			   class='settings-sidebar-close'
+			   onclick="openCfg(false)"
+			   src='assets/close.svg'>
+			</img>
+			<div id='settings-option-bg'
+				class='settings-option-bg'>
+				<a href='javascript:setBg();'>
+					Change background
+				</a>
+			</div>
+			<div id='settings-option-bg-online'
+				class='settings-option-bg-online'>
+				<a href='javascript:showBgOnlineForm();'>
+					Load Online Background
+				</a>
+			</div>
+			<div id='settings-option-bg-online-choose'
+				class='settings-option-bg-online-choose'>
+				<input type='text'
+					   name='online-src'
+					   class='settings-option-bg-online-choose-source'
+					   id='settings-option-bg-online-choose-source'>
+				<button style='display: none;'
+						id='online-background-submit'
+						onclick='
+							setBgOnline();
+    						document
+							.getElementById("settings-option-bg-online-choose")
+							.style.display = "none";
+						'>
+				</button>
+			</div>
+			<div id='settings-option-bg-clear'
+				class='settings-option-bg-clear'>
+				<a href='javascript:delBg();'>
+					Clear Background
+				</a>
+			</div>
+			<div id='settings-option-bg-update'
+				class='settings-option-bg-update'>
+				<a href='javascript:updateBg();'>
+					Update Background
+				</a>
+			</div>
+		</div>
 	<script>
 		document.getElementById('query-field-text-write-input').addEventListener("keyup", (e) => {
 			if (e.keyCode === 13) {
@@ -46,7 +110,16 @@
 			}
 		});
 	</script>
+	<script>
+		document.getElementById('settings-option-bg-online-choose-source').addEventListener("keyup", (e) => {
+			if (e.keyCode === 13) {
+				e.preventDefault();
+				document.getElementById("online-background-submit").click();
+			}
+		});
+	</script>
 	<script>loadEngines();loopClock();</script>
+	<script>document.getElementById('query-field-text-write-input').focus();</script>
 	</body>
 
 </html>

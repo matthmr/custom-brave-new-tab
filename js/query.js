@@ -6,6 +6,7 @@ var engineQueryForm = {
     'google': '/search?q=',
     'duckduckgo': '/?q=',
     'bing': '/search?q=',
+    'youtube': '/results?search_query=',
     'url': ''
 };
 
@@ -13,6 +14,7 @@ var engineUrl = {
     'google': 'https://www.google.com',
     'duckduckgo': 'https://duckduckgo.com',
     'bing': 'https://www.bing.com',
+    'youtube': 'https://www.youtube.com',
     'url': ''
 };
 
