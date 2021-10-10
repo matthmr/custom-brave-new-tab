@@ -1,0 +1,35 @@
+.query-field-choose-engine-button {
+  background-color: #00215e;
+  color: #cecece;
+  /*padding: 16px;*/
+  font-size: 19px;
+  padding-bottom: 2px;
+  border: none;
+}
+
+.query-field-choose-engine {
+  position: relative;
+  display: inline-block;
+}
+
+.query-field-choose-engine-list {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.query-field-choose-engine-list a {
+  color: black;
+  /*padding: 12px 16px;*/
+  text-decoration: none;
+  display: block;
+}
+
+.query-field-choose-engine-list a:hover {background-color: #ddd;}
+
+.query-field-choose-engine:hover .query-field-choose-engine-list {display: block;}
+
+.query-field-choose-engine:hover .query-field-choose-engine-button {background-color: #3e8e41;}

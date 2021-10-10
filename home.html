@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>New Tab</title>
+		<script src='js/time.js'></script>
+		<script src='js/query.js'></script>
+		<link rel='stylesheet' href='css/style.css'>
+		<link rel='stylesheet' href='css/engine.css'>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+	</head>
+
+	<body style='border:none;'>
+		<div id='clock' class='clock'></div>
+		<div class='query-field' id='query-field'>
+			<div class='query-field-text'>
+				<form id='query-text' class='query-text'>Search</form>
+			</div>
+			<div class='query-field-engine'>
+				<span class='query-field-choose-engine'>
+					<button class='query-field-choose-engine-button'
+							id='query-field-choose-engine-button'
+					>
+						Engine
+					</button>
+					<div class='query-field-choose-engine-list'
+						id='query-field-choose-engine-list'>
+					</div>
+				</span>
+				<span class='query-field-text-write'>
+					<input type='text' name='query' class='query-field-text-write-input'>
+				</span>
+			</div>
+		</div>
+	<script>loadEngines();loopClock();</script>
+	</body>
+
+</html>
