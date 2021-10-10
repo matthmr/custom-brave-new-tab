@@ -3,15 +3,17 @@ var stdengine, localengine;
 localengine = stdengine = 'google';
 
 var engineQueryForm = {
-    'google': 'search?q=%s',
-    'duckduckgo': '?q=%s',
-    'bing': 'search?q=%s'
+    'google': '/search?q=',
+    'duckduckgo': '/?q=',
+    'bing': '/search?q=',
+    'url': ''
 };
 
 var engineUrl = {
-    'google': 'www.google.com',
-    'duckduckgo': 'duckduckgo.com',
-    'bing': 'www.bing.com'
+    'google': 'https://www.google.com',
+    'duckduckgo': 'https://duckduckgo.com',
+    'bing': 'https://www.bing.com',
+    'url': ''
 };
 
 var setEngine = (id) => {
@@ -27,7 +29,14 @@ function loadEngines() {
         node.setAttribute('href', `javascript:setEngine(${i++});`);
         text = document.createTextNode(url);
         node.appendChild(text);
-        document.getElementById("query-field-choose-engine-list").appendChild(node);
+        document.getElementById('query-field-choose-engine-list').appendChild(node);
     }
     document.getElementById('query-field-choose-engine-button').innerHTML=localengine;
+}
+
+function gotoQuery() {
+    let form;
+    form = document.getElementById('query-field-text-write-input').value;
+    form = (localengine != 'url')? encodeURIComponent(form): form;
+    window.location.href = `${engineUrl[localengine]}${engineQueryForm[localengine]}${form}`;
 }

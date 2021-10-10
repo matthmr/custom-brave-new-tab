@@ -24,8 +24,13 @@ body {
     font-size: 70px;
     font-family: TimeFont;
     padding-left: 3%;
-    padding-top:  1%;
+    padding-top:  3%;
     position: fixed;
+}
+
+.query-text {
+    font-family: TimeFont;
+    font-size: 35px;
 }
 
 .query-field {
@@ -35,4 +40,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.query-field-engine {
+    padding-right: 300px;
+}
+
+.query-field-text-write-input {
+    position: fixed;
+    width: 80%;
 }

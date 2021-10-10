@@ -22,17 +22,30 @@
 					<button class='query-field-choose-engine-button'
 							id='query-field-choose-engine-button'
 					>
-						Engine
 					</button>
 					<div class='query-field-choose-engine-list'
 						id='query-field-choose-engine-list'>
 					</div>
 				</span>
 				<span class='query-field-text-write'>
-					<input type='text' name='query' class='query-field-text-write-input'>
+					<input type='text'
+						   name='query'
+						   class='query-field-text-write-input'
+						   id='query-field-text-write-input'>
+					<button id='url-submit'
+							onclick='gotoQuery();'
+							style="display: none"></button>
 				</span>
 			</div>
 		</div>
+	<script>
+		document.getElementById('query-field-text-write-input').addEventListener("keyup", (e) => {
+			if (e.keyCode === 13) {
+				e.preventDefault();
+				document.getElementById("url-submit").click();
+			}
+		});
+	</script>
 	<script>loadEngines();loopClock();</script>
 	</body>
 
