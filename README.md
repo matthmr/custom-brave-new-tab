@@ -2,7 +2,7 @@
 
 ### How it looks
 
-![404 Not Found](https://raw.githubusercontent.com/matthmr/custom-brave-new-tab/main/assets/cnt-exhibit-2.git)
+![404 Not Found](https://github.com/matthmr/custom-brave-new-tab/blob/main/assets/cnt.exhibit-2.gif?raw=true)
 
 
 
