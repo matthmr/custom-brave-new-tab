@@ -1,20 +1,19 @@
 # New Tab page
 
-### How it looks
+## EDIT
 
-![404 Not Found](https://github.com/matthmr/custom-brave-new-tab/blob/main/assets/cnt.exhibit-2.gif?raw=true)
-
+The brave team [already implemented this](https://github.com/brave/brave-browser/issues/19640). Go use that instead.
 
 
 ## Why?
 
-Brave is a good browser. Really. But there's an annoyingly large lack of customization, especially in the everyday New Tab page.
+Brave is a good browser. Really. ~~But there's an annoyingly large lack of customization, especially in the everyday New Tab page.~~
 
-This is not a solution, rather a *workaround*.
+~~This is not a solution, rather a *workaround*.~~
 
-Do this at your own will.
+~~Do this at your own will.~~
 
-
+(this has been implemented already)
 
 ## How?
 
